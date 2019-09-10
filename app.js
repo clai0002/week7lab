@@ -148,7 +148,7 @@ function getNewId() {
 }
 
 //extra task
-app.get('/updatename/:oldfirstname/:newfirstname',function(req,res){
+app.get('/:oldfirstname/:newfirstname',function(req,res){
     oldname = req.params.oldfirstname;
     newname = req.params.newfirstname; 
     developer.updateMany({'name.firstname': oldname},{$set:{'name.firstname': newname}},{upsert: true},function(err,result){
