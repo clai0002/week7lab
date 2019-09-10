@@ -130,8 +130,8 @@ app.get('/deleteCompleted',function(req,res){
     res.redirect('/getalltask');
 })
 
-app.get('/updateTask',function(req,res){
-    let fileName = viewsPath + "/updateTask.html"
+app.get('/updatetask',function(req,res){
+    let fileName = viewsPath + "/updatetask.html"
     res.sendFile(fileName);
 })
 
