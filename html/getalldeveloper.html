@@ -1,0 +1,82 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<a href="/">home</a>
+<a href="/updatetask">update task</a>
+<a href="/deletetask">delete task</a>
+<a href="/getalltask">list all task</a>
+<a href="/updateTask">update task</a>
+<a href="/deletetask">delete task</a>
+<a href="/insertnewtask">add task</a>
+<a href="/adddeveloper ">add developer</a>
+<a href="/deleteCompleted ">delete completed</a>
+<head>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table id="t01">
+        <tr>
+            <th>
+                ID
+           </th>
+            <th>
+                firstname
+            </th>
+            <th>
+                lastname
+            </th>
+            <th>
+                level
+            </th>
+            <th>
+               state
+            </th>
+            <th>
+                suburb
+             </th>
+             <th>
+                street
+            </th>
+            <th>
+                unit
+            </th>
+        </tr>
+        <% for (let i = 0; i< dev.length; i++){ %>
+            <tr>
+                    <td>
+                        <%= dev[i]._id %>
+                    </td>                
+                    <td>
+                        <%= dev[i].name.firstname %>
+                    </td>
+                    <td>
+                        <%= dev[i].name.lastname %>
+                    </td>                      
+                    <td>
+                        <%= dev[i].level %>
+                    </td>                    
+                    <td>
+                        <%= dev[i].address.street %>
+                    </td>
+                    <td>
+                        <%= dev[i].address.suburb %>
+                    </td>
+                    <td>
+                        <%= dev[i].address.street %>
+                    </td>
+                    <td>
+                        <%= dev[i].address.unit %>
+                    </td>                  
+            </tr>
+            
+        <% } %>
+
+    
+    </table>
+    
+</body>

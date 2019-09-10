@@ -1,0 +1,69 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<a href="/">home</a>
+<a href="/updatetask">update task</a>
+<a href="/deletetask">delete task</a>
+<a href="/insertnewtask">add task</a>
+<a href="/getalldeveloper">list all developer</a>
+<a href="/adddeveloper ">add developer</a>
+<a href="/deleteCompleted ">delete completed</a>
+<head>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table id="t01">
+        <tr>
+            <th>
+                ID
+           </th>
+            <th>
+                Name
+            </th>
+            <th>
+                assign to 
+            </th>
+            <th>
+               Due Date
+            </th>
+            <th>
+                status
+             </th>
+             <th>
+                description
+            </th>
+        </tr>
+        <% for (let i = 0; i< task.length; i++){ %>
+            <tr>
+                    <td>
+                        <%= task[i].TaskID %>
+                    </td>                
+                    <td>
+                        <%= task[i].Taskname %>
+                    </td>
+                    <td>
+                        <%= task[i].assignto %>
+                    </td>                      
+                    <td>
+                        <%= task[i].Duedate %>
+                    </td>
+                    <td>
+                        <%= task[i].taskstatus %>
+                    </td>                     
+                    <td>
+                        <%= task[i].taskdescription %>
+                    </td>
+                   
+            </tr>
+            
+        <% } %>
+
+    
+    </table>
+    
+</body>
